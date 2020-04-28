@@ -1,3 +1,3 @@
 # Pluralsight: Java Fundamentals 
 
-## This course 
+This is a course offered by [Pluralsight](https://www.pluralsight.com/).

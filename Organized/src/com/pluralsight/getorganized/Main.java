@@ -6,7 +6,7 @@ public class Main {
     // System.out.println("Hello Get Organized");
 
     /* -------------------------------------------------------------------------- */
-    /* DEMO: Operator Precedence */
+    /* L23: DEMO: Operator Precedence */
     /* -------------------------------------------------------------------------- */
     // int valA = 21;
     // int valB = 6;
@@ -24,7 +24,7 @@ public class Main {
     // System.out.println(result4);
 
     /* -------------------------------------------------------------------------- */
-    /* DEMO: Type Conversion */
+    /* L25: DEMO: Type Conversion */
     /* -------------------------------------------------------------------------- */
     float floatVal = 1.0f;
     double doubleVal = 4.0d;

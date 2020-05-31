@@ -3,8 +3,23 @@ package com.pluralsight.calcengine;
 public class MathEquation {
     private double leftVal;
     private double rightVal;
-    private char opCode;
+    private char opCode = 'a';
     private double result;
+
+    /* -------------------------------------------------------------------------- */
+    /* L57: DEMO: Setting Class initializers and constructors */
+    /* -------------------------------------------------------------------------- */
+    public MathEquation() {}
+
+    public MathEquation(char opCode) {
+        this.opCode = opCode;
+    }
+
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
 
     /* -------------------------------------------------------------------------- */
     /* L50: DEMO: w/ Accessors & Mutators */

@@ -29,6 +29,35 @@ public class Main {
         }
 
         /* -------------------------------------------------------------------------- */
+        /* L65: DEMO: Method Overloading */
+        /* -------------------------------------------------------------------------- */
+        System.out.println();
+        System.out.println("Using Overloads");
+        System.out.println();
+
+        double leftDouble = 9.0d;
+        double rightDouble = 4.0d;
+
+        MathEquation equationOverload = new MathEquation('d');
+
+        equationOverload.execute(leftDouble, rightDouble);
+        System.out.print("result = ");
+        System.out.println(equationOverload.getResult());
+
+        // Doing the same thing as above but w/ a widening type cast/conversion
+        int leftInt = 9;
+        int rightInt = 4;
+
+        equationOverload.execute(leftInt, rightInt);
+        System.out.print("result = ");
+        System.out.println(equationOverload.getResult());
+
+        // Showing how having different types and Java's default casting works
+        equationOverload.execute((double) leftInt, rightInt);
+        System.out.print("result = ");
+        System.out.println(equationOverload.getResult());
+
+        /* -------------------------------------------------------------------------- */
         /* L32: DEMO: CalcEngine */
         /* -------------------------------------------------------------------------- */
         // double val1 = 100.0d;

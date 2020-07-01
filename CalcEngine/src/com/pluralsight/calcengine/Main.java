@@ -85,5 +85,27 @@ public class Main {
         // }
 
         // System.out.println(result);
+
+        /* -------------------------------------------------------------------------- */
+        /* L76: DEMO: CalcEngine with Specialized Classes  */
+        /* -------------------------------------------------------------------------- */
+        System.out.println();
+        System.out.println("BLLR?: ——————————————————————————————————————————");
+        System.out.println("BLLR?: USING INHERITANCE");
+        System.out.println("BLLR?: ——————————————————————————————————————————");
+
+        CalculateBase[] calculators = {
+            // Calculators! Mount up!
+            new Divider(100.0d, 50.0d),
+            new Adder(25.0d, 92.0d),
+            new Subtractor(225.0d, 17.0d),
+            new Multiplier(11.0d, 3.0d),
+        };
+
+        for (CalculateBase calculator : calculators) {
+            calculator.calculate();
+            System.out.print("BLLR?: result = ");
+            System.out.println(calculator.getResult());
+        }
     }
 }

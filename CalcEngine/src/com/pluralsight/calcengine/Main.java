@@ -115,10 +115,10 @@ public class Main {
             "add 1.0",
             "add xx 25.0",
             "addX 0.0 0.0",
-            // "divide 100.0 50.0",
-            // "add 25.0 92.0",
-            // "subtract 225.0 17.0",
-            // "multiply 11.0 3.0",
+            "divide 100.0 50.0",
+            "add 25.0 92.0",
+            "subtract 225.0 17.0",
+            "multiply 11.0 3.0",
         };
 
         CalculateHelper helper = new CalculateHelper();
@@ -126,6 +126,7 @@ public class Main {
         for (String statement : statements) {
             try {
                 helper.process(statement);
+                System.out.println(helper);
             } catch (InvalidStatementException err) {
                 System.out.println(err.getMessage());
 
@@ -133,7 +134,6 @@ public class Main {
                     System.out.println("  Original exception: " + err.getCause().getMessage());
                 }
             }
-            System.out.println(helper);
         }
     }
 }

@@ -29,6 +29,9 @@ public class CalculateHelper {
         }
 
         String commandString = parts[0]; // add
+        System.out.println("BLLR?: ——————————————————————————————————————————");
+        System.out.println("BLLR?: COMMAND_STRING -> " + commandString);
+        System.out.println("BLLR?: ——————————————————————————————————————————");
 
         try {
             leftValue = Double.parseDouble(parts[1]); // 1.0
@@ -38,6 +41,10 @@ public class CalculateHelper {
         }
 
         setCommandFromString(commandString);
+
+        System.out.println("BLLR?: ——————————————————————————————————————————");
+        System.out.println("BLLR?: COMMAND -> " + command);
+        System.out.println("BLLR?: ——————————————————————————————————————————");
 
         if (command == null) {
             throw new InvalidStatementException("Invalid command", statement);

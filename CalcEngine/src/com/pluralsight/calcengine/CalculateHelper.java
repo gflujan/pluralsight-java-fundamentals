@@ -1,7 +1,8 @@
 package com.pluralsight.calcengine;
 
 /**
- * Created by nneurall on 03-Jul-2020
+ * @author nneurall
+ * @created 30-Jul-2020
  */
 
 public class CalculateHelper {
@@ -15,14 +16,33 @@ public class CalculateHelper {
     double rightValue;
     double result;
 
-    public void process(String statement) {
+    public void process(String statement) throws InvalidStatementException {
         // add 1.0 2.0
         String[] parts = statement.split(" ");
+
+        /* ========================================================================== */
+        /* L95: DEMO: CalcEngine with Exceptions */
+        /* All exceptions related code was added in this portion */
+        /* ========================================================================== */
+        if (parts.length != 3) {
+            throw new InvalidStatementException("Incorrect number of fields", statement);
+        }
+
         String commandString = parts[0]; // add
-        leftValue = Double.parseDouble(parts[1]); // 1.0
-        rightValue = Double.parseDouble(parts[2]); // 2.0
+
+        try {
+            leftValue = Double.parseDouble(parts[1]); // 1.0
+            rightValue = Double.parseDouble(parts[2]); // 2.0
+        } catch (NumberFormatException err) {
+            throw new InvalidStatementException("Non-numberic ;-) data", statement, err);
+        }
 
         setCommandFromString(commandString);
+
+        if (command == null) {
+            throw new InvalidStatementException("Invalid command", statement);
+        }
+
         CalculateBase calculator = null;
 
         switch (command) {
@@ -57,6 +77,8 @@ public class CalculateHelper {
             command = MathCommand.Multiply;
         } else if (commandString.equalsIgnoreCase(MathCommand.Divide.toString())) {
             command = MathCommand.Divide;
+        } else {
+            command = null;
         }
     }
 

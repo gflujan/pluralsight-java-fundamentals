@@ -1,7 +1,8 @@
 package com.pluralsight.calcengine;
 
 /**
- * Created by nneurall on 03-Jul-2020
+ * @author nneurall
+ * @created 30-Jul-2020
  */
 
 public enum MathCommand {

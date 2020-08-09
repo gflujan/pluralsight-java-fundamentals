@@ -7,10 +7,10 @@ package com.pluralsight.calcengine;
 
 public class Main {
     public static void main(String[] args) {
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         /* L37: DEMO: w/ Arrays, Loops & Switch */
         /* L48: Re-factoring to use MathEquation class */
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         // double[] leftVals = { 100.0d, 25.0d, 225.0d, 11.0d };
         // double[] rightVals = { 50.0d, 92.0d, 17.0d, 3.0d };
         // char[] opCodes = { 'd', 'a', 's', 'm' };
@@ -28,9 +28,9 @@ public class Main {
         //     System.out.println(equation.getResult());
         // }
 
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         /* L65: DEMO: Method Overloading */
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         // System.out.println();
         // System.out.println("Using Overloads");
         // System.out.println();
@@ -57,9 +57,9 @@ public class Main {
         // System.out.print("result = ");
         // System.out.println(equationOverload.getResult());
 
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         /* L32: DEMO: CalcEngine */
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         // double val1 = 100.0d;
         // double val2 = 50.0d;
         // double result;
@@ -86,9 +86,9 @@ public class Main {
 
         // System.out.println(result);
 
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         /* L76: DEMO: CalcEngine with Specialized Classes */
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         // System.out.println();
         // System.out.println("BLLR?: ——————————————————————————————————————————");
         // System.out.println("BLLR?: USING INHERITANCE");
@@ -108,10 +108,13 @@ public class Main {
         //     System.out.println(calculator.getResult());
         // }
 
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         /* L87: DEMO: CalcEngine with Specialized Classes */
-        /* -------------------------------------------------------------------------- */
+        /* ========================================================================== */
         String[] statements = {
+            "add 1.0",
+            "add xx 25.0",
+            "addX 0.0 0.0",
             "divide 100.0 50.0",
             "add 25.0 92.0",
             "subtract 225.0 17.0",
@@ -121,7 +124,15 @@ public class Main {
         CalculateHelper helper = new CalculateHelper();
 
         for (String statement : statements) {
-            helper.process(statement);
+            try {
+                helper.process(statement);
+            } catch (InvalidStatementException err) {
+                System.out.println(err.getMessage());
+
+                if (err.getCause() != null) {
+                    System.out.println("  Original exception: " + err.getCause().getMessage());
+                }
+            }
             System.out.println(helper);
         }
     }

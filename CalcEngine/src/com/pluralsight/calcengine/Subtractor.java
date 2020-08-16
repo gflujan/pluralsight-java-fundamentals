@@ -6,21 +6,21 @@ package com.pluralsight.calcengine;
  */
 
 public class Subtractor extends CalculateBase {
-    /* ========================================================================== */
-    /* CONSTRUCTORS */
-    /* ========================================================================== */
-    public Subtractor() {}
+	/* ========================================================================== */
+	/* CONSTRUCTORS */
+	/* ========================================================================== */
+	public Subtractor() {}
 
-    public Subtractor(double leftVal, double rightVal) {
-        super(leftVal, rightVal);
-    }
+	public Subtractor(double leftVal, double rightVal) {
+		super(leftVal, rightVal);
+	}
 
-    /* ========================================================================== */
-    /* METHODS */
-    /* ========================================================================== */
-    @Override
-    public void calculate() {
-        double value = getLeftVal() - getRightVal();
-        setResult(value);
-    }
+	/* ========================================================================== */
+	/* METHODS */
+	/* ========================================================================== */
+	@Override
+	public void calculate() {
+		double value = getLeftVal() - getRightVal();
+		setResult(value);
+	}
 }

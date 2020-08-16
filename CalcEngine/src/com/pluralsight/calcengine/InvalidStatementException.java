@@ -9,11 +9,11 @@ package com.pluralsight.calcengine;
 /* L95: DEMO: CalcEngine with Exceptions */
 /* ========================================================================== */
 public class InvalidStatementException extends Exception {
-    public InvalidStatementException(String reason, String statement) {
-        super(reason + ": " + statement);
-    }
+	public InvalidStatementException(String reason, String statement) {
+		super(reason + ": " + statement);
+	}
 
-    public InvalidStatementException(String reason, String statement, Throwable cause) {
-        super(reason + ": " + statement, cause);
-    }
+	public InvalidStatementException(String reason, String statement, Throwable cause) {
+		super(reason + ": " + statement, cause);
+	}
 }

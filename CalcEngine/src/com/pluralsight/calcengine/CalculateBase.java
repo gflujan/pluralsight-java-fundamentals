@@ -6,45 +6,45 @@ package com.pluralsight.calcengine;
  */
 
 abstract public class CalculateBase {
-    private double leftVal;
-    private double rightVal;
-    private double result;
+	private double leftVal;
+	private double rightVal;
+	private double result;
 
-    /* ========================================================================== */
-    /* GETTERS / SETTERS */
-    /* ========================================================================== */
-    public double getLeftVal() {
-        return leftVal;
-    }
+	/* ========================================================================== */
+	/* GETTERS / SETTERS */
+	/* ========================================================================== */
+	public double getLeftVal() {
+		return leftVal;
+	}
 
-    public void setLeftVal(double leftVal) {
-        this.leftVal = leftVal;
-    }
+	public void setLeftVal(double leftVal) {
+		this.leftVal = leftVal;
+	}
 
-    public double getRightVal() {
-        return rightVal;
-    }
+	public double getRightVal() {
+		return rightVal;
+	}
 
-    public void setResult(double result) {
-        this.result = result;
-    }
+	public void setResult(double result) {
+		this.result = result;
+	}
 
-    public double getResult() {
-        return result;
-    }
+	public double getResult() {
+		return result;
+	}
 
-    /* ========================================================================== */
-    /* CONSTRUCTORS */
-    /* ========================================================================== */
-    public CalculateBase() {}
+	/* ========================================================================== */
+	/* CONSTRUCTORS */
+	/* ========================================================================== */
+	public CalculateBase() {}
 
-    public CalculateBase(double leftVal, double rightVal) {
-        this.leftVal = leftVal;
-        this.rightVal = rightVal;
-    }
+	public CalculateBase(double leftVal, double rightVal) {
+		this.leftVal = leftVal;
+		this.rightVal = rightVal;
+	}
 
-    /* ========================================================================== */
-    /* METHODS */
-    /* ========================================================================== */
-    abstract public void calculate();
+	/* ========================================================================== */
+	/* METHODS */
+	/* ========================================================================== */
+	abstract public void calculate();
 }

@@ -6,21 +6,21 @@ package com.pluralsight.calcengine;
  */
 
 public class Divider extends CalculateBase {
-    /* ========================================================================== */
-    /* CONSTRUCTORS */
-    /* ========================================================================== */
-    public Divider() {}
+	/* ========================================================================== */
+	/* CONSTRUCTORS */
+	/* ========================================================================== */
+	public Divider() {}
 
-    public Divider(double leftVal, double rightVal) {
-        super(leftVal, rightVal);
-    }
+	public Divider(double leftVal, double rightVal) {
+		super(leftVal, rightVal);
+	}
 
-    /* ========================================================================== */
-    /* METHODS */
-    /* ========================================================================== */
-    @Override
-    public void calculate() {
-        double value = getLeftVal() / getRightVal();
-        setResult(value);
-    }
+	/* ========================================================================== */
+	/* METHODS */
+	/* ========================================================================== */
+	@Override
+	public void calculate() {
+		double value = getLeftVal() / getRightVal();
+		setResult(value);
+	}
 }

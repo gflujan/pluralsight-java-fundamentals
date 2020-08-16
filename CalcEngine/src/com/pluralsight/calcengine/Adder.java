@@ -6,21 +6,21 @@ package com.pluralsight.calcengine;
  */
 
 public class Adder extends CalculateBase {
-    /* ========================================================================== */
-    /* CONSTRUCTORS */
-    /* ========================================================================== */
-    public Adder() {}
+	/* ========================================================================== */
+	/* CONSTRUCTORS */
+	/* ========================================================================== */
+	public Adder() {}
 
-    public Adder(double leftVal, double rightVal) {
-        super(leftVal, rightVal);
-    }
+	public Adder(double leftVal, double rightVal) {
+		super(leftVal, rightVal);
+	}
 
-    /* ========================================================================== */
-    /* METHODS */
-    /* ========================================================================== */
-    @Override
-    public void calculate() {
-        double value = getLeftVal() + getRightVal();
-        setResult(value);
-    }
+	/* ========================================================================== */
+	/* METHODS */
+	/* ========================================================================== */
+	@Override
+	public void calculate() {
+		double value = getLeftVal() + getRightVal();
+		setResult(value);
+	}
 }

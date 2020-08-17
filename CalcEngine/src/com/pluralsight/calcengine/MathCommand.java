@@ -5,7 +5,7 @@ package com.pluralsight.calcengine;
  * @created 30-Jul-2020
  */
 
-public enum MathCommand {
+enum MathCommand {
 	Add,
 	Subtract,
 	Multiply,

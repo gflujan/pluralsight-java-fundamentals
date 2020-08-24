@@ -2,7 +2,7 @@ package com.pluralsight.calcengine;
 
 /**
  * @author nneurall
- * @created 30-Jun-2020
+ * @created on 30-Jun-2020
  */
 
 abstract public class CalculateBase {
@@ -23,6 +23,10 @@ abstract public class CalculateBase {
 
 	public double getRightVal() {
 		return rightVal;
+	}
+
+	public void setRightVal(double rightVal) {
+		this.rightVal = rightVal;
 	}
 
 	public void setResult(double result) {

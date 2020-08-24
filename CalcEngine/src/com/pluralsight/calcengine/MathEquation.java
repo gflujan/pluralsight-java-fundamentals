@@ -1,5 +1,10 @@
 package com.pluralsight.calcengine;
 
+/**
+ * @author nneurall
+ * @created on 30-Jun-2020
+ */
+
 public class MathEquation {
 	private double leftVal;
 	private double rightVal;

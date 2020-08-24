@@ -12,7 +12,7 @@ import com.pluralsight.calcengine.InvalidStatementException;
 
 /**
  * @author Metal Gabe
- * @created 23-May-2020 @ 11:35
+ * @created on 23-May-2020
  */
 
 public class Main {
@@ -21,7 +21,7 @@ public class Main {
 		// useCalculateHelper();
 
 		/* ========================================================================== */
-		/* L110: DEMO: Dynamically Extending CalcEngine */
+		/* L110: DEMO: Dynamically Extending CalcEngine - Declare & Implement */
 		/* ========================================================================== */
 		String[] statements = {
 			"add 25.0 92.0"

@@ -2,25 +2,19 @@ package com.pluralsight.calcengine;
 
 /**
  * @author nneurall
- * @created on 30-Jun-2020
+ * @created	on 23-Aug-2020
  */
 
-public class Subtractor extends CalculateBase {
+public interface MathProcessing {
 	/* ========================================================================== */
-	/* CONSTRUCTORS */
+	/* CONSTANTS */
 	/* ========================================================================== */
-	public Subtractor() {}
-
-	public Subtractor(double leftVal, double rightVal) {
-		super(leftVal, rightVal);
-	}
+	String SEPARATOR = " ";
 
 	/* ========================================================================== */
 	/* METHODS */
 	/* ========================================================================== */
-	@Override
-	public void calculate() {
-		double value = getLeftVal() - getRightVal();
-		setResult(value);
-	}
+	String getKeyword(); // add
+	char getSymbol(); // +
+	double doCalculation(double leftVal, double rightVal);
 }

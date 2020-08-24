@@ -2,7 +2,7 @@ package com.pluralsight.calcengine;
 
 /**
  * @author Gabriel F. Lujan
- * @created 08-Aug-2020
+ * @created on 08-Aug-2020
  */
 
 /* ========================================================================== */

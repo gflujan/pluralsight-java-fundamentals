@@ -1,7 +1,8 @@
 package com.pluralsight.calcengine;
 
 /**
- * Created by nneurall on 30-Jun-2020
+ * @author nneurall
+ * @created on 30-Jun-2020
  */
 
 public class Multiplier extends CalculateBase {

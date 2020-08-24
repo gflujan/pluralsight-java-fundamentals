@@ -17,6 +17,52 @@ import com.pluralsight.calcengine.InvalidStatementException;
 
 public class Main {
 	public static void main(String[] args) {
+		// seeOlderShit();
+		// useCalculateHelper();
+
+		/* ========================================================================== */
+		/* L110: DEMO: Dynamically Extending CalcEngine */
+		/* ========================================================================== */
+		String[] statements = {
+			"add 25.0 92.0"
+		};
+
+		for (String statement : statements) {
+			// do stuff...
+		}
+	}
+
+	/* ========================================================================== */
+	/* L87: DEMO: CalcEngine with Specialized Classes */
+	/* ========================================================================== */
+	static void useCalculateHelper() {
+		String[] statements = {
+			"add 1.0",
+			"add xx 25.0",
+			"addX 0.0 0.0",
+			"divide 100.0 50.0",
+			"add 25.0 92.0",
+			"subtract 225.0 17.0",
+			"multiply 11.0 3.0",
+		};
+
+		CalculateHelper helper = new CalculateHelper();
+
+		for (String statement : statements) {
+			try {
+				helper.process(statement);
+				System.out.println(helper);
+			} catch (InvalidStatementException err) {
+				System.out.println(err.getMessage());
+
+				if (err.getCause() != null) {
+					System.out.println("  Original exception: " + err.getCause().getMessage());
+				}
+			}
+		}
+	}
+
+	static void seeOlderShit() {
 		/* ========================================================================== */
 		/* L37: DEMO: w/ Arrays, Loops & Switch */
 		/* L48: Re-factoring to use MathEquation class */
@@ -117,33 +163,5 @@ public class Main {
 		//     System.out.print("BLLR?: result = ");
 		//     System.out.println(calculator.getResult());
 		// }
-
-		/* ========================================================================== */
-		/* L87: DEMO: CalcEngine with Specialized Classes */
-		/* ========================================================================== */
-		String[] statements = {
-			"add 1.0",
-			"add xx 25.0",
-			"addX 0.0 0.0",
-			"divide 100.0 50.0",
-			"add 25.0 92.0",
-			"subtract 225.0 17.0",
-			"multiply 11.0 3.0",
-		};
-
-		CalculateHelper helper = new CalculateHelper();
-
-		for (String statement : statements) {
-			try {
-				helper.process(statement);
-				System.out.println(helper);
-			} catch (InvalidStatementException err) {
-				System.out.println(err.getMessage());
-
-				if (err.getCause() != null) {
-					System.out.println("  Original exception: " + err.getCause().getMessage());
-				}
-			}
-		}
 	}
 }

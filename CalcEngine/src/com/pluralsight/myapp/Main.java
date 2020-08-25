@@ -2,9 +2,12 @@ package com.pluralsight.myapp;
 
 // import com.pluralsight.calcengine.Adder;
 // import com.pluralsight.calcengine.CalculateBase;
+import com.pluralsight.calcengine.Adder;
 import com.pluralsight.calcengine.CalculateHelper;
 // import com.pluralsight.calcengine.Divider;
+import com.pluralsight.calcengine.DynamicHelper;
 import com.pluralsight.calcengine.InvalidStatementException;
+import com.pluralsight.calcengine.MathProcessing;
 // import com.pluralsight.calcengine.MathCommand;
 // import com.pluralsight.calcengine.MathEquation;
 // import com.pluralsight.calcengine.Multiplier;
@@ -22,13 +25,20 @@ public class Main {
 
 		/* ========================================================================== */
 		/* L110: DEMO: Dynamically Extending CalcEngine - Declare & Implement */
+		/* L111: DEMO: Dynamically Extending CalcEngine - Add Support */
+		/* L112: DEMO: Dynamically Extending CalcEngine - New Functionality */
 		/* ========================================================================== */
 		String[] statements = {
 			"add 25.0 92.0"
 		};
 
+		DynamicHelper helper = new DynamicHelper(new MathProcessing[] {
+			new Adder()
+		});
+
 		for (String statement : statements) {
-			// do stuff...
+			String output = helper.process(statement);
+			System.out.println(output);
 		}
 	}
 
